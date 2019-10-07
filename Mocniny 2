@@ -1,0 +1,27 @@
+/*
+ * Autor: Antonín Vojtěch
+ * This is a code we had as an exam to write in C#, edited to work in Java
+ */
+package mocniny;
+
+/**
+ *
+ * @author Antonín Vojtěch
+ */
+public class MOCNINY {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int x;
+        for (x = 2; x <= 1024; x = x * 2) {
+            if (x > 2) {
+                System.out.print(", ");
+            }
+            System.out.print(x);
+        }
+
+    }
+
+}
