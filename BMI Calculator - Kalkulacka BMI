@@ -1,0 +1,45 @@
+/*
+ * Autor: Antonín Vojtěch
+ * Inspirovano BMI kalkulackou uzivatele https://github.com/bubilem
+ */
+package bmi;
+
+/**
+ *
+ * @author Antonín Vojtěch
+ */
+import java.util.Scanner; //Import scanneru - funkce jako scanf v C#
+
+public class BMI {
+
+    /**
+     * @param args the command line arguments
+     */
+    
+
+    public static void main(String[] args) {
+        double bmi;
+        Scanner sc = new Scanner(System.in); //inicializace scanneru (scanf)
+
+        System.out.print("-------Zadejte Vahu v KG--------\n    "); //print pouzit, pokud chceme vypsat jen text bez dalsich hodnot
+        int kg = sc.nextInt();  // sc.nextInt() slouzi k skoceni na dalsi radek bez ukonceni programu - podobne funkci clearBuffer v C#
+
+        System.out.print("-------Zadejte Vysku v CM--------\n    ");
+        int v = sc.nextInt();
+
+        bmi = kg / ((v / 100.) * (v / 100.));
+        System.out.printf("Vase BMI je: %.2f%n" , bmi); //printf pouzit, pokud chceme vypsat text a nasledne hodnotu, jinak to nebude fungovat
+        if (bmi < 18.5) {
+            System.out.printf("Podle WHO mate Podvahu %n"); //%n je /n akorat v Jave
+        } else if (bmi >= 18.5 && bmi <= 25) {
+            System.out.printf("Podle WHO mate Normalni vahu %n");
+        } else if (bmi >= 25.1 && bmi <= 30) {
+            System.out.printf("Podle WHO mate Nadvahu %n");
+        } else if (bmi >= 30.1 && bmi <= 40) {
+            System.out.printf("Podle WHO mate Obezitu %n");
+        } else if (bmi >= 40) {
+            System.out.printf("Podle WHO mate Morbidni Obezitu %n");
+        }
+    }
+
+}
