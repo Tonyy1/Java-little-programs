@@ -1,0 +1,35 @@
+/*
+ * Autor: Antonín Vojtěch
+ * 
+ */
+package generator;
+
+import java.util.Arrays;
+import java.util.Random;
+
+public class Generator {
+
+    public static void main(String[] args) {
+
+        int[] pole = new int[10];
+        Random rand = new Random();
+        double avg = 0;
+        double sum = 0;
+
+        for (int i = 0; i < 10; i++) {
+            pole[i] = rand.nextInt(50);
+            if (pole[9] < 9) {
+                System.out.printf("%d, ", pole[i]);
+            } else {
+                System.out.printf("%d ", pole[i]);
+            }
+            sum = sum + pole[i];
+            avg = sum / 10;
+        }
+        System.out.print("\n");
+        Arrays.sort(pole);
+        System.out.println("Nejmenší číslo v poli je: " + pole[0]);
+        System.out.println("Největší číslo v poli je: " + pole[9]);
+        System.out.println("Průměrná hodnota v poli je: " + avg);
+    }
+}
