@@ -1,0 +1,17 @@
+import java.util.Stack;
+
+public class StackExample {
+    public static void main(String[] args) {
+        // Creating a Stack
+        Stack<String> lifo = new Stack<>();
+
+        // Pushing new items to the Stack
+        lifo.push("8");
+        lifo.push("7");
+        lifo.push("6");
+        
+        System.out.println("Stack => " + lifo);
+        System.out.println();
+
+    }
+}
