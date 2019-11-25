@@ -1,6 +1,6 @@
 import java.util.Stack;
 
-public class StackExample {
+public class LIFO {
     public static void main(String[] args) {
         // Creating a Stack
         Stack<String> lifo = new Stack<>();
@@ -10,7 +10,7 @@ public class StackExample {
         lifo.push("7");
         lifo.push("6");
         
-        System.out.println("Stack => " + lifo);
+        System.out.println("Stack: " + lifo);
         System.out.println();
 
     }
