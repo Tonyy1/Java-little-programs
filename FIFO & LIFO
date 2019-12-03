@@ -1,0 +1,27 @@
+package lulw;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class LULW {
+
+    public static void main(String[] args) {
+
+        List<Integer> FIFO = new ArrayList<>();
+        FIFO.add(3);
+        FIFO.add(4);
+        FIFO.add(5);
+        System.out.printf("FIFO: " + FIFO);
+        System.out.print("\n");
+
+        List<Integer> LIFO = new ArrayList<>();
+        LIFO.add(3);
+        LIFO.add(4);
+        LIFO.add(5);
+        Collections.reverse(LIFO);
+        System.out.printf("LIFO: " + LIFO);
+        System.out.print("\n");
+
+    }
+}
