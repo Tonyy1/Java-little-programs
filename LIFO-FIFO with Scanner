@@ -1,0 +1,38 @@
+package fifo;
+
+/**
+ *
+ * @author Toshiba
+ */
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+
+public class FIFO {
+
+    public static void main(String[] args) {
+
+        System.out.print("Zadejte 3 čísla: \n");
+        Scanner x = new Scanner(System.in);
+        int x1 = x.nextInt();
+        int x2 = x.nextInt();
+        int x3 = x.nextInt();
+        
+        List<Integer> FIFO = new ArrayList<>();
+        FIFO.add(x1);
+        FIFO.add(x2);
+        FIFO.add(x3);
+        System.out.printf("FIFO: " + FIFO);
+        System.out.print("\n");
+
+        List<Integer> LIFO = new ArrayList<>();
+        LIFO.add(x1);
+        LIFO.add(x2);
+        LIFO.add(x3);
+        Collections.reverse(LIFO);
+        System.out.printf("LIFO: " + LIFO);
+        System.out.print("\n");
+
+    }
+}
