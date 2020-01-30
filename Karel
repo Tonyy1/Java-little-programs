@@ -1,0 +1,69 @@
+/*
+ *
+ * 
+ */
+package karel;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Antonín Vojtěch
+ */
+public class Karel {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        //Deklarace potřebných proměných
+        int exit = 0;
+        int x = 0;
+        int y = 0;
+        int bok = 1;
+        //Inicializace scanneru
+        Scanner input = new Scanner(System.in);
+        String karel;
+        System.out.print("Zadej příkaz: ");
+        //Hlavní kód
+        while (exit == 0) {
+            karel = input.next();
+            //Krok
+            if (karel.equals("krok")) {
+                System.out.println("Udelal jsi krok");
+                switch (bok) {
+                    case 1:
+                        x = x + 1;
+                        break;
+                    case 2:
+                        y = y + 1;
+                        break;
+                    case 3:
+                        x = x - 1;
+                        break;
+                    case 4:
+                        y = y - 1;
+                        break;
+                }
+                //Otáčení
+            } else if (karel.equals("vlevobok")) {
+                System.out.println("Vlevobok");
+                bok = bok + 1;
+            }
+            //Generování Pole
+            if (karel.equals("show")) {
+                int[][] pole = new int[5][5];
+                pole[x][y] = 5;
+                for (int j = 0; j < pole[0].length; j++) {
+                    for (int i = 0; i < pole.length; i++) {
+                        System.out.printf(" " + pole[i][j]);
+                    }
+                    System.out.println();
+                }
+            }
+            if (karel.equals("exit")) {
+                exit = 1;
+            }
+        }
+    }
+}
