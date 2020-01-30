@@ -28,7 +28,7 @@ public class Karel {
         //Hlavní kód
         while (exit == 0) {
             karel = input.next();
-            //Krok
+            //Krok + směr
             if (karel.equals("krok")) {
                 System.out.println("Udelal jsi krok");
                 switch (bok) {
@@ -45,7 +45,7 @@ public class Karel {
                         y = y - 1;
                         break;
                 }
-                //Otáčení
+                //Příkaz pro otočení
             } else if (karel.equals("vlevobok")) {
                 System.out.println("Vlevobok");
                 bok = bok + 1;
